@@ -17,7 +17,9 @@ public class Inventory {
             JOptionPane.showMessageDialog(null, "El paquete se enviará por Envío Premium");
         } else if (peso <= 0 || distancia <= 0) {
             JOptionPane.showMessageDialog(null, "El peso o la distancia no puede ser negativo");
-        } else {
+        } else if (distancia >= 20 && distancia <= 100 && tipo_producto.equalsIgnoreCase("N")) {
+            JOptionPane.showMessageDialog(null, "Envío estándar");
+        }else {
             JOptionPane.showMessageDialog(null, "Su producto no puede ser procesado");
         }
     }
